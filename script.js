@@ -3,6 +3,7 @@ let oldBalance = 0;
 
 // DOM elements
 const shop = document.getElementById("shop");
+const items=document.getElementById("items");
 const number = document.getElementById("number");
 const total = document.getElementById("total");
 const paid = document.getElementById("paid");
@@ -31,6 +32,7 @@ function saveBill() {
 
   const bill = {
     shop: shop.value,
+    items:items.value,
     number: number.value,
     total: Number(total.value),
     paid: Number(paid.value),
@@ -45,6 +47,7 @@ function saveBill() {
 
   // Reset form
   shop.value = "";
+  items.value="";
   number.value = "";
   total.value = "";
   paid.value = "";
@@ -71,6 +74,7 @@ function loadHistory() {
     historyTable.innerHTML += `
       <tr>
         <td>${b.shop}</td>
+        <td>${b.items}</td>
         <td>${b.total}</td>
         <td>${b.paid}</td>
         <td>${b.balance}</td>
@@ -96,6 +100,7 @@ function deleteBill(index) {
 function useBill(index) {
   const b = bills[index];
   shop.value = b.shop;
+items.value=b.items;
   number.value = b.number;
   total.value = b.total;
   paid.value = b.paid;
