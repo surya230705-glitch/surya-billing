@@ -1,0 +1,77 @@
+/* Body */
+body {
+  background: linear-gradient(to bottom, #f0f2f5, #e6f2ff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Gradient Buttons */
+.btn-gradient-primary {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: #fff;
+  border: none;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #00a1cc);
+}
+
+.btn-gradient-secondary {
+  background: linear-gradient(45deg, #6c757d, #adb5bd);
+  color: #fff;
+  border: none;
+}
+
+.btn-gradient-secondary:hover {
+  background: linear-gradient(45deg, #495057, #868e96);
+}
+
+.btn-gradient-success {
+  background: linear-gradient(45deg, #28a745, #85e085);
+  color: #fff;
+  border: none;
+}
+
+.btn-gradient-success:hover {
+  background: linear-gradient(45deg, #218838, #5cd65c);
+}
+
+/* Headings */
+.text-gradient {
+  background: linear-gradient(90deg, #ff6b6b, #5f27cd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Card hover effect */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Service cards */
+.service-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Table */
+table tbody tr:hover {
+  background-color: #d1ecf1;
+  cursor: pointer;
+}
+
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}

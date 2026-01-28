@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sruya Photo Frames</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5 position-relative">
+
+  <!-- Top Buttons -->
+  <div class="top-btns d-flex justify-content-end gap-2 mb-3">
+    <button class="btn btn-gradient-primary" onclick="showHome()"><i class="bi bi-plus-circle"></i> Add</button>
+    <button class="btn btn-gradient-secondary" onclick="showHistory()"><i class="bi bi-clock-history"></i> History</button>
+  </div>
+
+  <h2 class="text-center mb-5 text-gradient">Sruya Photo Frames</h2>
+
+  <!-- HOME PAGE -->
+  <div id="homePage">
+
+    <!-- Services Section -->
+    <section class="mb-5">
+      <h4 class="mb-3 text-primary">Our Services</h4>
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="card service-card shadow-lg">
+            
+            <div class="card-body text-center">
+              <h6 class="card-title text-dark">Photo Frames</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card service-card shadow-lg">
+            
+            <div class="card-body text-center">
+              <h6 class="card-title text-dark">Album Printing</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card service-card shadow-lg">
+            
+            <div class="card-body text-center">
+              <h6 class="card-title text-dark">Canvas Prints</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card service-card shadow-lg">
+            
+            <div class="card-body text-center">
+              <h6 class="card-title text-dark">Custom Gifts</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Billing Form -->
+    <section class="card p-4 shadow-lg bg-light">
+      <h5 class="mb-4 text-success"><i class="bi bi-receipt"></i> Add Bill</h5>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <input type="text" id="shop" class="form-control form-control-lg" placeholder="Shop Name">
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="number" class="form-control form-control-lg" placeholder="Mobile Number">
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="total" class="form-control form-control-lg" placeholder="Total Amount">
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="paid" class="form-control form-control-lg" placeholder="Paid Amount">
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="balance" class="form-control form-control-lg" placeholder="Balance" readonly>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+          <button class="btn btn-gradient-success w-100 btn-lg" onclick="saveBill()"><i class="bi bi-save"></i> Save</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- HISTORY PAGE -->
+  <div id="historyPage" style="display:none">
+    <h4 class="mb-3 text-secondary"><i class="bi bi-clock-history"></i> Bill History</h4>
+    <table class="table table-hover table-striped align-middle shadow-sm rounded">
+      <thead class="table-dark">
+        <tr>
+          <th>Shop</th>
+          <th>Total</th>
+          <th>Paid</th>
+          <th>Balance</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="historyTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
